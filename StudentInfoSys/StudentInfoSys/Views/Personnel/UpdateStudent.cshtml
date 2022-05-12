@@ -1,0 +1,103 @@
+﻿@*@using ModelLayer.Student
+    @model  StudentResult*@
+@model StudentInfoSys.Models.UpdateStudentViewModel
+
+@{
+    ViewBag.Title = "UpdateStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>Kayıt Güncelleme</h2>
+
+@*@using (Html.BeginForm("UpdateStudent", "Personnel", FormMethod.Post, new { onsubmit = "return myFunction();" }))
+    {*@
+<div class="form-group">
+    <div class="col-md-4">
+        @Html.HiddenFor(model => model.studentResult.Id, new { @class = "form-control" })
+        @Html.Label("Adı:")
+        @Html.TextBoxFor(model => model.studentResult.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.studentResult.Name, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("Soyadı:")
+        @Html.TextBoxFor(model => model.studentResult.Surname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.studentResult.Surname, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("Email:")
+        @Html.TextBoxFor(model => model.studentResult.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.studentResult.Email, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("Telefon:")
+        @Html.TextBoxFor(model => model.studentResult.Phone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.studentResult.Phone, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("Adres:")
+        @Html.TextBoxFor(model => model.studentResult.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.studentResult.Address, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("TC:")
+        @Html.TextBoxFor(model => model.studentResult.Tc, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.studentResult.Tc, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("Dönem:")
+        @Html.TextBoxFor(model => model.studentResult.Semester, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.studentResult.Semester, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+
+        <label>Bölüm:</label>
+        <select id="departmentDropdown" class="form-control" onchange="loadAcademician()">
+
+            @foreach (var item in Model.departments)
+            {
+                if (item.DepartmentID == Model.studentResult.DepartmentID)
+                {
+                    <option value="@item.DepartmentID" selected="selected">@item.DepartmentName</option>
+                }
+                else
+                {
+                    <option value="@item.DepartmentID">@item.DepartmentName</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="col-md-4">
+        <label>Danışman Adı:</label>
+        <select id="AcademicianDropDown" class="form-control">
+            @foreach (var item in Model.academicians)
+            {
+                if (item.Id == Model.studentResult.AcademicianID)
+                {
+                    <option value="@item.Id" selected="selected">@item.Name</option>
+                }
+                else
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="col-md-12">
+        <button type="button" class="btn btn-info" id="update-btn" onclick="successClick()">Güncelle</button>
+    </div>
+</div>
+
+@* } *@
+@section scripts{
+    <script src="~/Scripts/Pages/UpdateStudent.js"></script>
+}

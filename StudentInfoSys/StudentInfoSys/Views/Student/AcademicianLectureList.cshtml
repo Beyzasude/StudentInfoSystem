@@ -1,0 +1,27 @@
+﻿@using ModelLayer
+@model  List<AcademicianLectureResult>
+
+@{
+    ViewBag.Title = "AcademicianLectureList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Seçilen Dersler</h2>
+<table class="table table-bordered">
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <label for="lecture">@item.LectureName</label>
+                </td>
+                <td>
+                    @item.AcademicianName @item.AcademicianSurname
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+
+

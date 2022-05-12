@@ -1,0 +1,15 @@
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\ModelLayer.dll.config
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\ModelLayer.dll
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\ModelLayer.pdb
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\EntitiyLayer.dll
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\EntityFramework.dll
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\EntitiyLayer.pdb
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\EntitiyLayer.dll.config
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\EntityFramework.xml
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\obj\Release\ModelLayer.csproj.AssemblyReference.cache
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\obj\Release\ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\obj\Release\ModelLayer.csproj.CopyComplete
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\obj\Release\ModelLayer.dll
+C:\Users\Beyza Sude Erol\source\repos\StudentInfoSys\ModelLayer\obj\Release\ModelLayer.pdb

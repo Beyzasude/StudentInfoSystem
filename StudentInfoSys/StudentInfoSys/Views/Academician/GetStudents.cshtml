@@ -1,0 +1,80 @@
+﻿@using ModelLayer.StudentLecture;
+@model List<StudentLectureResult>
+@{
+    ViewBag.Title = "GetStudents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
+
+<h2>Öğrenci Listesi</h2>
+
+<div>
+    <table id="myTable" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Numara</th>
+                <th>AD</th>
+                <th>SOYAD</th>
+                <th>DETAY</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+             {
+                <tr>
+                    <td>@item.StudentID</td>
+                    <td>@item.StudentName</td>
+                    <td>@item.StudentSurname</td>
+                    <td><button class="btn btn-success view-student" onclick="loadData(@item.StudentID)">Detay</button></td>
+                </tr>
+             }
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                @*<h4 class="modal-title" id="myModalLabel">Öğrenci Detay</h4>*@
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered student-info-tbl">
+                        <thead>
+                            <tr>
+                                <th>StudentID</th>
+                                <th>AD</th>
+                                <th>SOYAD</th>
+                                <th>EMAİL</th>
+                                <th>TELEFON</th>
+                                <th>ADRES</th>
+                                <th>TC</th>
+                                <th>DÖNEM</th>
+                                <th>DANIŞMAN ADI</th>
+                                <th>BÖLÜM</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="student-info-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Pages/GetStudentInfo.js"></script>
+}

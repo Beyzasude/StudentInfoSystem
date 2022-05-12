@@ -1,0 +1,12 @@
+﻿.custom {
+    max-width: fit-content !important;
+}
+
+.buttons {
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+}
+
+.buttons:hover {
+    background-color: #3c434a !important;
+}

@@ -1,0 +1,81 @@
+﻿@using ModelLayer.Student
+@model  StudentResult
+@{
+    ViewBag.Title = "StudentInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Öğrenci Bilgileri</h2>
+<table class="table table-bordered">
+    <tr>
+        <td>AD :</td>
+        <td>@Model.Name</td>
+    </tr>
+
+    <tr>
+        <td>SOYAD :</td>
+        <td>@Model.Surname</td>
+    </tr>
+
+    <tr>
+        <td>EMAİL :</td>
+        <td>@Model.Email</td>
+    </tr>
+
+    <tr>
+        <td>TELEFON :</td>
+        <td>@Model.Phone</td>
+    </tr>
+
+    <tr>
+        <td>ADRES :</td>
+        <td>@Model.Address</td>
+    </tr>
+
+    <tr>
+        <td>TC :</td>
+        <td>@Model.Tc</td>
+    </tr>
+
+    <tr>
+        <td>BÖLÜM :</td>
+        <td>@Model.DepartmentName</td>
+    </tr>
+
+    <tr>
+        <td>DÖNEM :</td>
+        <td>@Model.Semester</td>
+    </tr>
+
+
+</table>
+
+
+
+<!--<table class="table table-bordered">
+    <tr>-->
+        @*<th>NUMARA</th>*@
+        <!--<th>AD</th>
+        <th>SOYAD</th>
+        <th>EMAİL</th>
+        <th>TELEFON</th>
+        <th>ADRES</th>
+        <th>TC</th>
+        <th>BÖLÜM</th>
+        <th>DÖNEM</th>
+
+    </tr>
+
+<tr>-->
+    @*<td>@Model.Id</td>*@
+    <!--<td>@Model.Name</td>
+    <td>@Model.Surname</td>
+    <td>@Model.Email</td>
+    <td>@Model.Phone</td>
+    <td>@Model.Address</td>
+    <td>@Model.Tc</td>
+    <td>@Model.DepartmentName</td>
+    <td>@Model.Semester</td>
+
+</tr>
+</table>-->

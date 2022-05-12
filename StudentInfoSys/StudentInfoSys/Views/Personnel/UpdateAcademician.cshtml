@@ -1,0 +1,68 @@
+﻿@*@model ModelLayer.Academician.AcademicianResult*@
+@model StudentInfoSys.Models.UpdateAcademicianViewModel
+@{
+    ViewBag.Title = "UpdateAcademician";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>Kayıt Güncelleme</h2>
+
+<br />
+@*@using (Html.BeginForm("UpdateAcademician", "Personnel", FormMethod.Post))
+    {*@
+<div class="form-group">
+    <div class="col-md-4">
+        @Html.HiddenFor(model => model.academicianResult.Id, new { @class = "form-control" })
+        @Html.Label("Adı:")
+        @Html.TextBoxFor(model => model.academicianResult.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.academicianResult.Name, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("Soyadı:")
+        @Html.TextBoxFor(model => model.academicianResult.Surname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.academicianResult.Surname, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("Email:")
+        @Html.TextBoxFor(model => model.academicianResult.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.academicianResult.Email, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+    <div class="col-md-4">
+        @Html.Label("Telefon:")
+        @Html.TextBoxFor(model => model.academicianResult.Phone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.academicianResult.Phone, "", new { @class = "text-danger" })
+        <br /><br />
+    </div>
+
+    <div class="col-md-4">
+        <label>Bölüm:</label>
+        <select id="departmentDropdown" class="form-control">
+
+            @foreach (var item in Model.departments)
+            {
+                if (item.DepartmentID == Model.academicianResult.DepartmentID)
+                {
+                    <option value="@item.DepartmentID" selected="selected">@item.DepartmentName</option>
+                }
+                else
+                {
+                    <option value="@item.DepartmentID">@item.DepartmentName</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="col-md-12">
+        <button type="button" class="btn btn-info" onclick="successClick()">Güncelle</button>
+    </div>
+</div>
+@*}*@
+
+@section scripts{
+    <script src="~/Scripts/Pages/UpdateAcademician.js"></script>
+}

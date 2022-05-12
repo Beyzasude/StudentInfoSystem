@@ -1,0 +1,51 @@
+﻿@using ModelLayer.StudentLecture;
+@model List<StudentLectureResult>
+@{
+    ViewBag.Title = "GetStudents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
+
+
+<h2>Öğrenci Listesi</h2>
+
+<div>
+    <table id="myTable" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Numara</th>
+                <th>AD</th>
+                <th>SOYAD</th>
+                <th>DETAY</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.StudentID</td>
+                    <td>@item.StudentName</td>
+                    <td>@item.StudentSurname</td>
+                    <td><a href="/Academician/GetStudentInfo/@item.StudentID"><button class="btn btn-success">Detay</button></a></td>
+                </tr>
+            }
+        </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+

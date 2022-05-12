@@ -1,0 +1,34 @@
+﻿@using ModelLayer.Academician
+@model  AcademicianResult
+@{
+    ViewBag.Title = "AcademicianInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danışman Bilgileri</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <td>AD :</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>SOYAD :</td>
+        <td>@Model.Surname</td>
+    </tr>
+    <tr>
+        <td>EMAİL :</td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>TELEFON :</td>
+        <td>@Model.Phone</td>
+    </tr>
+    <tr>
+        <td>BÖLÜM :</td>
+        <td>@Model.DepartmentName</td>
+    </tr>
+     
+
+</table>

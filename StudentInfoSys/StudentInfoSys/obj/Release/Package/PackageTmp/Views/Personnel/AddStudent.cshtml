@@ -1,0 +1,142 @@
+﻿@*@model EntitiyLayer.Student*@
+@model ModelLayer.Student.StudentAddInput
+@{
+    ViewBag.Title = "AddStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>ÖĞRENCİ KAYIT FORMU</h2>
+<br />
+@using (Html.BeginForm("AddStudent", "Personnel", FormMethod.Post))
+{
+    <div class="form-group">
+        <div>
+            @Html.Label("Adı:")
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Soyadı:")
+            @Html.TextBoxFor(model => model.Surname, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Email:")
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Telefon:")
+            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Adres:")
+            @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("TC:")
+            @Html.TextBoxFor(model => model.Tc, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Tc, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Şifre:")
+            @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Dönem:")
+            @Html.TextBoxFor(model => model.Semester, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Semester, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Danışman Adı:")
+            @Html.TextBoxFor(model => model.AcademicianID, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.AcademicianID, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Bölüm:")
+            @Html.TextBoxFor(model => model.DepartmentID, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.DepartmentID, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Ders Programı:")
+            @Html.TextBoxFor(model => model.SyllabusID, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SyllabusID, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-info">Kaydet</button>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<form class="form-group" method="post" action="/Personnel/AddStudent">
+        <label for="txtName">AD:</label>
+        <input type="text" placeholder="Ad" class="form-control" name="Name" /><br />
+        <label for="txtName">SOYAD:</label>
+        <input type="text" placeholder="Soyad" class="form-control" name="Surname" /><br />
+        <label for="txtName">EMAİL:</label>
+        <input type="text" placeholder="Email" class="form-control" name="Email" /><br />
+        <label for="txtName">TELEFON:</label>
+        <input type="text" placeholder="Telefon" class="form-control" name="Phone" /><br />
+        <label for="txtName">ADRES:</label>
+        <input type="text" placeholder="Adres" class="form-control" name="Address" /><br />
+        <label for="txtName">TC:</label>
+        <input type="text" placeholder="Tc" class="form-control" name="Tc" /><br />
+        <label for="txtName">ŞİFRE:</label>
+        <input type="text" placeholder="Şifre" class="form-control" name="Password" /><br />
+        <label for="txtName">DÖNEM:</label>
+        <input type="number" placeholder="Semester" class="form-control" name="Semester" /><br />
+        <label for="txtName">AKADEMİSYEN:</label>
+        <input type="number" placeholder="Akademisyeni" class="form-control" name="AcademicianID" /><br />
+        <label for="txtName">BÖLÜM:</label>
+        <input type="number" placeholder="Bölüm" class="form-control" name="DepartmentID" /><br />
+        <label for="txtName">DERS PROGRAMI:</label>
+        <input type="number" placeholder="Ders Programı" class="form-control" name="SyllabusID" /><br />
+    </form>*@
+
+
+
+
+
+
+
+
+

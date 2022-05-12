@@ -1,0 +1,61 @@
+﻿@model ModelLayer.Academician.AcademicianAddInput
+
+@{
+    ViewBag.Title = "AddAcademician";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>Akademisyen Kayıt Formu</h2>
+
+<br />
+@using (Html.BeginForm("AddAcademician", "Personnel", FormMethod.Post))
+{
+    <div class="form-group">
+        <div>
+            @Html.Label("Adı:")
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Soyadı:")
+            @Html.TextBoxFor(model => model.Surname, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Email:")
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Telefon:")
+            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Şifre:")
+            @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Bölüm:")
+            @Html.TextBoxFor(model => model.DepartmentID, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.DepartmentID, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            @Html.Label("Ders Programı:")
+            @Html.TextBoxFor(model => model.SyllabusID, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SyllabusID, "", new { @class = "text-danger" })
+            <br /><br />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-info">Kaydet</button>
+        </div>
+    </div>
+}

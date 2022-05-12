@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "UpdateImage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Fotoğraf Güncelle</h2>
+<div>
+    <div class="col-md-4">
+        <label>Fotoğraf Yükle:</label>
+        <input class="form-control form-control-sm" id="formFileSm" type="file">
+        <br />
+    </div>
+    <div class="col-md-12">
+        <button type="button" class="btn btn-info" onclick="successClick()">Kaydet</button>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/Pages/UpdateImageAcademician.js"></script>
+}

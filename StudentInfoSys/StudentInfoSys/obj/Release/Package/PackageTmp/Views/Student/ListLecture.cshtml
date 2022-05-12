@@ -1,0 +1,44 @@
+﻿@using ModelLayer
+@*@using StudentInfoSys.Models*@
+@model  List<AcademicianLectureResult>
+
+
+@{
+    ViewBag.Title = "ListLecture";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>Dersler</h2>
+@using (Html.BeginForm("ListLecture", "Student", FormMethod.Post))
+{
+
+    <form class="form-group" method="post">
+        <table class="table table-bordered">
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <input name="Lecture" type="checkbox" value="@item.AcademicianLectureID">
+                            <label for="lecture">@item.LectureName</label>
+                        </td>
+                        <td>
+                            @item.AcademicianName @item.AcademicianSurname
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+        <br />
+
+        <button type="submit" class="btn btn-info"> Kaydet </button>
+
+    </form>
+
+}
+
+
+
+

@@ -1,0 +1,33 @@
+﻿@using ModelLayer.Personnel
+@model  PersonnelResult
+
+@{
+    ViewBag.Title = "PersonnelInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Personel Bilgileri</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        @*<th>PersonnelID</th>*@
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>EMAİL</th>
+        <th>TELEFON</th>
+        
+
+    </tr>
+
+    <tr>
+        @*<td>@Model.Id</td>*@
+        <td>@Model.Name</td>
+        <td>@Model.Surname</td>
+        <td>@Model.Email</td>
+        <td>@Model.Phone</td>
+    </tr>
+
+
+</table>
+

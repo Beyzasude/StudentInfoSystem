@@ -1,0 +1,29 @@
+﻿@using ModelLayer.Academician
+@model  AcademicianResult
+@{
+    ViewBag.Title = "AcademicianInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danışman Bilgileri</h2>
+
+<table class="table table-bordered academician-info-tbl">
+    <thead>
+        <tr>
+            <th>AD</th>
+            <th>SOYAD</th>
+            <th>EMAİL</th>
+            <th>TELEFON</th>
+            <th>BÖLÜM</th>
+        </tr>
+    </thead>
+    @*<tbody>
+        <tr>
+            
+        </tr>
+    </tbody>*@
+</table>
+
+@section scripts{
+    <script src="~/Scripts/Pages/academicianInfo.js"></script>
+}

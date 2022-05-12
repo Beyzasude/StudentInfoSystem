@@ -1,0 +1,50 @@
+﻿@using ModelLayer.Student;
+@model List<StudentResult>
+@{
+    ViewBag.Title = "AddStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>Öğrenci Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>NUMARA</th>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>EMAİL</th>
+        <th>TELEFON</th>
+        <th>ADRES</th>
+        <th>TC</th>
+        <th>DÖNEM</th>
+        <th>DANIŞMAN ADI</th>
+        <th>BÖLÜM</th>
+        <th>DÜZENLE</th>
+        <th>SİL</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.Address</td>
+            <td>@item.Tc</td>
+            <td>@item.Semester</td>
+            <td>@item.AcademicianName</td>
+            <td>@item.DepartmentName</td>
+            <td><a href="/Personnel/UpdateStudent/@item.Id"><button class="btn btn-success">Güncelle</button></a></td>
+            @*<td><button class="btn btn-success view-student" onclick="loadData(@item.Id)">Güncelle</button></td>*@
+            <td><a href="/Personnel/DeleteStudent/@item.Id"><button class="btn btn-danger">Sil</button></a></td>
+        </tr>
+    }
+
+</table>
+
+@section scripts{
+    <script src="~/Scripts/Pages/UpdateStudent.js"></script>
+}

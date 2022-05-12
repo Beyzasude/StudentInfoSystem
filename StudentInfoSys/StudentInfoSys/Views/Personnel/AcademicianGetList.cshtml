@@ -1,0 +1,38 @@
+﻿@using ModelLayer.Academician;
+@model List<AcademicianResult>
+
+@{
+    ViewBag.Title = "AcademicianGetList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Akademisyen Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        @*<th>AcademicianID</th>*@
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>EMAİL</th>
+        <th>TELEFON</th>
+        <th>BÖLÜM</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
+
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>@item.Id</td>*@
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.DepartmentName</td>
+            <td><a href="/Personnel/UpdateAcademician/@item.Id"><button class="btn btn-success">Güncelle</button></a></td>
+            <td><a href="/Personnel/DeleteAcademician/@item.Id"><button class="btn btn-danger">Sil</button></a></td>
+        </tr>
+    }
+
+</table>

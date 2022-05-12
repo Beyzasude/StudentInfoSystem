@@ -1,0 +1,33 @@
+﻿@using ModelLayer.StudentLecture
+@model  List<StudentLectureResult>
+
+@{
+    ViewBag.Title = "StudentNoteList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Not Bilgisi</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ders</th>
+            <th>Vize</th>
+            <th>Final</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.LectureName</td>
+                <td>@item.Note1</td>
+                <td>@item.Note2</td>
+            </tr>
+        }
+    </tbody>
+
+
+
+</table>
+

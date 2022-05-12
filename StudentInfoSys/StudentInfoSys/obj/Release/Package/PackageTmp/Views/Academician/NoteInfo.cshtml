@@ -1,0 +1,59 @@
+﻿@using ModelLayer.StudentLecture
+@*@model IEnumerable<StudentLectureResult>*@
+@model List<StudentLectureResult>
+
+@{
+    ViewBag.Title = "NoteInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+
+<h2>Not Bilgisi</h2>
+
+@using (Html.BeginForm("NoteInfo", "Academician", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <div>
+        <table id="myTable" class="table table-bordered">
+            <thead>
+                <tr>
+                    @*<th>Numara</th>*@
+                    <th>AD</th>
+                    <th>SOYAD</th>
+                    <th>Vize</th>
+                    <th>Final</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (var i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        @*<td value="@item.StudentID">@item.StudentID<label for="lecture">@item.LectureName</label></td>*@
+                        @*<td ><label for="StudentID">@item.StudentID</label></td>*@
+                        @Html.HiddenFor(model => model[i].StudentID)
+                        @Html.HiddenFor(model => model[i].LectureID)
+                        @Html.HiddenFor(model => model[i].LectureName)
+                        @Html.HiddenFor(model => model[i].StudentName)
+                        @Html.HiddenFor(model => model[i].StudentSurname)
+                        <td>@Html.DisplayFor(model => model[i].StudentName, new { @class = "form-control" }) </td>
+                        <td>@Html.DisplayFor(model => model[i].StudentSurname, new { @class = "form-control" }) </td>
+                        <td>@Html.EditorFor(model => model[i].Note1, new { @class = "form-control" })</td>
+                        <td>@Html.EditorFor(model => model[i].Note2, new { @class = "form-control" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <input type="submit" class="btn btn-success" value="Kaydet" id="successClick">
+
+    </div>
+}
+
+<script src="~/AdminLTE-3.0.4/build/js/iziToast.js"></script>
+
+@section scripts{
+    <script src="~/Scripts/Pages/NoteInfo.js"></script>
+}
